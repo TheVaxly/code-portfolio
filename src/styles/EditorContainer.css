@@ -1,0 +1,62 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.tabs {
+  background: #252526;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 5px solid #ff0000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 5px 10px;
+  background: #2d2d2d;
+  margin-right: 5px;
+  border: 1px solid #333;
+  border-radius: 3px 3px 0 0;
+  color: #d4d4d4;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tab.active {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.tab .icon {
+  margin-right: 7px;
+  vertical-align: middle;
+  display: inline-block; 
+  transform: translateY(2px);
+}
+
+.tab:hover {
+  background: #3c3c3c; 
+}
+
+.editor {
+  flex: 1;
+  padding: 20px;
+  background: #1e1e1e; 
+  overflow-y: auto; 
+  color: #d4d4d4; 
+}
+
+.editor h1,
+.editor h2 {
+  text-align: center;
+  color: #ffffff;
+}

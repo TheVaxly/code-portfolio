@@ -1,0 +1,159 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* App Structure */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-theme .header {
+  background: #f1f1f1;
+  color: #000;
+}
+
+.light-theme .activity-bar {
+  background: #ffffff;
+}
+
+.light-theme .sidebar {
+  background: #f7f7f7;
+  border-right: 1px solid #ccc;
+}
+
+.light-theme .tabs {
+  background: #f0f0f0;
+}
+
+.light-theme .tab {
+  background: #e0e0e0;
+  color: #000;
+}
+
+.light-theme .editor {
+  background: #ffffff;
+  color: #000;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.dark-theme .header {
+  background: #333333;
+  color: #ffffff;
+}
+
+.dark-theme .activity-bar {
+  background: #1e1e1e;
+}
+
+.dark-theme .sidebar {
+  background: #252526;
+  border-right: 1px solid #333;
+}
+
+.dark-theme .tabs {
+  background: #252526;
+  border-color: #1e1e1e;
+}
+
+.dark-theme .tab {
+  background: #2d2d2d;
+  color: #d4d4d4;
+}
+
+.dark-theme .tab.active {
+  background: #1e1e1e;
+  color: #ffffff;
+  border-color: #1e1e1e;
+}
+
+.dark-theme .editor {
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+
+/* Header */
+.header {
+  height: 30px;
+  background: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+  font-size: 12px;
+}
+
+/* App Body */
+.app-body {
+  display: flex;
+  flex: 1;
+  height: calc(100% - 30px); /* Remaining height after header */
+  overflow: hidden;
+}
+
+/* Activity Bar */
+.activity-bar {
+  width: 50px;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #252526;
+  padding: 10px;
+  border-right: 1px solid #333;
+  overflow-y: auto;
+}
+
+/* Editor Container */
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Tabs */
+.tabs {
+  background: #252526;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid #333;
+}
+
+/* Editor */
+.editor {
+  flex: 1;
+  padding: 20px;
+  background: #1e1e1e;
+  overflow-y: auto;
+}
