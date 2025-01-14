@@ -4,8 +4,8 @@ import "./../styles/Contact.css";
 const Contact = () => {
   const socials = [
     "email: marten.uiboupin@gmail.com;",
-    "github: TheVaxly;",
-    "twitter: vaxly;",
+    "discord: vaxly;",
+    "phone: +372 5841 7113;",
   ];
 
   return (
@@ -15,7 +15,16 @@ const Contact = () => {
         <pre className="socials-pre">
           {`1   .socials {`}
           {socials.map((line, index) => `\n${index + 2}       ${line}`).join("")}
-          {`\n${socials.length + 2}   }`}
+          {`\n${socials.length + 2}       github: `}
+          <a
+            href="https://github.com/TheVaxly"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#007acc", textDecoration: "none" }} // Inline styling for the link
+          >
+            TheVaxly;
+          </a>
+          {`\n${socials.length + 3}   }`}
         </pre>
       </div>
 
