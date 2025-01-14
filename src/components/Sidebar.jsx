@@ -1,13 +1,14 @@
 import React from "react";
 import "./../styles/Sidebar.css";
-import { FaHtml5, FaReact, FaCss3 } from "react-icons/fa";
+import { FaHtml5, FaReact, FaCss3, FaJs } from "react-icons/fa";
 import { LuFileJson } from "react-icons/lu";
 
 const files = [
   { displayName: "Home.jsx", actualName: "home.jsx", icon: <FaReact /> },
   { displayName: "About.html", actualName: "about.jsx", icon: <FaHtml5 className="icon-html" /> },
   { displayName: "Contact.css", actualName: "contact.jsx", icon: <FaCss3 /> },
-  { displayName: "Projects.json", actualName: "projects.jsx", icon: <LuFileJson className="icon-json" /> },
+  { displayName: "Projects.json", actualName: "projects.jsx", icon: <LuFileJson className="icon-y" /> },
+  { displayName: "Skills.js", actualName: "skills.jsx", icon: <FaJs className="icon-y" /> },
 ];
 
 const Sidebar = ({ openFile }) => (

@@ -34,7 +34,7 @@ const App = () => {
     <div className={`app ${theme}-theme`}>
       <Header />
       <div className="app-body">
-        <ActivityBar openFile={openFile} openSettingsTab={openSettingsTab} />
+        <ActivityBar openFile={openFile} openSettingsTab={openSettingsTab} setActiveFile={setActiveFile}/>
         <Sidebar openFile={openFile} />
         <EditorContainer 
           activeFile={activeFile} 

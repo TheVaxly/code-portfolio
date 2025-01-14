@@ -1,0 +1,36 @@
+.skills-container {
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border-radius: 5px;
+  }
+  
+  .skills-section {
+    margin-bottom: 20px;
+  }
+  
+  .skills-section ul {
+    list-style-type: none; 
+    padding: 0;
+  }
+  
+  .skills-section li {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .progress-bar {
+    background-color: #444; 
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    background-color: #4caf50; 
+    height: 100%; 
+    transition: width 0.5s ease;
+  }
+  

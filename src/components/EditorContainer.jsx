@@ -6,8 +6,9 @@ import About from "../content/About.jsx";
 import Contact from "../content/Contact.jsx";
 import Projects from "../content/Projects.jsx";
 import Settings from "../content/Settings";
+import Skills from "../content/Skills.jsx";
 
-import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaJs  } from "react-icons/fa";
 import { LuFileJson } from "react-icons/lu";
 
 const tabs = [
@@ -15,6 +16,7 @@ const tabs = [
   { name: "about.jsx", icon: <FaHtml5 /> },
   { name: "contact.jsx", icon: <FaCss3Alt /> },
   { name: "projects.jsx", icon: <LuFileJson /> },
+  { name: "skills.jsx", icon: <FaJs /> },
 ];
 
 const contentMap = {
@@ -23,6 +25,7 @@ const contentMap = {
   "contact.jsx": <Contact />,
   "projects.jsx": <Projects />,
   "settings": <Settings />,
+  "skills.jsx": <Skills />,
 };
 
 const EditorContainer = ({ activeFile, setActiveFile }) => (
