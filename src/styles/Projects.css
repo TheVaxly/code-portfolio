@@ -4,10 +4,10 @@
   background-color: #1e1e1e;
 }
 
-.projects-container h2 {
+.projects-container h1 {
   text-align: center;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .projects-list {

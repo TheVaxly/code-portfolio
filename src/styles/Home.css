@@ -158,7 +158,7 @@ p {
     overflow-y: auto; 
 }
 
-h1::after {
+.content h1::after {
     content: "|";
     display: inline-block;
     margin-left: 5px;

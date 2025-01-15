@@ -45,7 +45,7 @@ const ProgressBar = ({ level }) => {
 const Skills = () => {
   return (
     <div className="skills-container">
-      <h2>Skills</h2>
+      <h1>Skills</h1>
       <div className="skills-section">
         <ul>
           {skillsData.skills.map((skill, index) => (
