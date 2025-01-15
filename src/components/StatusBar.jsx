@@ -10,10 +10,7 @@ const StatusBar = () => {
       <div className="main" style={{ cursor: "pointer" }}
           onClick={() => window.open(githubLink, '_blank')}>
         <span className="icon"><FaCodeBranch /></span>
-        <span 
-          className="main-text" >
-          main
-        </span>
+        <span className="main-text">main</span>
       </div>
       <span className="error">0 Errors  0 Warnings</span>
     </div>

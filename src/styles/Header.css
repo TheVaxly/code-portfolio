@@ -29,3 +29,9 @@
 .window-controls:hover {
   color: #ff9999;
 }
+
+@media (max-width: 400px) {
+  .menu-options {
+    display: none;
+  }
+}

@@ -16,13 +16,30 @@
 }
 
 .main-text {
-  position: absolute;
-  left: 25px;
+  margin-left: 5px; /* Add some space between icon and text */
   z-index: 1; 
 }
 
-  .error {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.error {
+  margin-left: auto; /* Push error text to the right */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+  .status-bar {
+    padding: 5px; /* Adjust padding */
+    font-size: 10px; /* Smaller font size for mobile */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
   }
+
+  .main {
+    display: flex; /* Keep it as a flexbox */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Keep cursor pointer */
+  }
+
+  .error {
+    margin-left: 10px; /* Space between the main section and error message */
+    white-space: nowrap; /* Prevent line break in the error message */
+  }
+}
