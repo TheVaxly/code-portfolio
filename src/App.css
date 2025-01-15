@@ -75,7 +75,7 @@ body {
   overflow-y: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .app-body {
     flex-direction: row;
   }
