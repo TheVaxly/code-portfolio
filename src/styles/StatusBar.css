@@ -16,30 +16,29 @@
 }
 
 .main-text {
-  margin-left: 5px; /* Add some space between icon and text */
+  margin-left: 5px;
   z-index: 1; 
 }
 
 .error {
-  margin-left: auto; /* Push error text to the right */
+  margin-left: auto;
 }
 
-/* Mobile View Adjustments */
 @media (max-width: 600px) {
   .status-bar {
-    padding: 5px; /* Adjust padding */
-    font-size: 10px; /* Smaller font size for mobile */
-    flex-wrap: nowrap; /* Prevent wrapping of items */
+    padding: 5px;
+    font-size: 10px;
+    flex-wrap: nowrap;
   }
 
   .main {
-    display: flex; /* Keep it as a flexbox */
-    align-items: center; /* Center items vertically */
-    cursor: pointer; /* Keep cursor pointer */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
   .error {
-    margin-left: 10px; /* Space between the main section and error message */
-    white-space: nowrap; /* Prevent line break in the error message */
+    margin-left: 10px;
+    white-space: nowrap;
   }
 }
