@@ -9,11 +9,6 @@ import "./App.css";
 const App = () => {
   const [activeFile, setActiveFile] = useState("home.jsx");
   const [tabs, setTabs] = useState(["home.jsx"]);
-  const [theme, setTheme] = useState("dark");
-
-  const toggleTheme = (selectedTheme) => {
-    setTheme(selectedTheme);
-  };
 
   const openFile = (fileName) => {
     if (!tabs.includes(fileName)) {
@@ -31,19 +26,14 @@ const App = () => {
   };
 
   return (
-    <div className={`app ${theme}-theme`}>
+    <div className="app">
       <Header />
       <div className="app-body">
-        <ActivityBar openFile={openFile} openSettingsTab={openSettingsTab} setActiveFile={setActiveFile}/>
+        <ActivityBar openFile={openFile} openSettingsTab={openSettingsTab} setActiveFile={setActiveFile} />
         <Sidebar openFile={openFile} />
-        <EditorContainer 
-          activeFile={activeFile} 
-          tabs={tabs} 
-          setActiveFile={setActiveFile} 
-          toggleTheme={toggleTheme} 
-        />
+        <EditorContainer activeFile={activeFile} tabs={tabs} setActiveFile={setActiveFile} />
       </div>
-      <StatusBar toggleTheme={toggleTheme} />
+      <StatusBar />
     </div>
   );
 };

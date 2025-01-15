@@ -10,16 +10,28 @@
   height: 30px;
   display: flex;
   align-items: center;
-  padding: 0 10px;
-  border-bottom: 5px solid #ff0000;
+  padding: 0 5px;
+  border-bottom: 3px solid #ff0000;
   position: sticky;
   top: 0;
   z-index: 10;
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+.tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
 }
 
 .tab {
-  padding: 5px 10px;
+  padding: 5px 8px;
   background: #2d2d2d;
   margin-right: 5px;
   border: 1px solid #333;
@@ -27,7 +39,8 @@
   color: #d4d4d4;
   font-size: 12px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .tab.active {
@@ -36,15 +49,15 @@
   font-weight: bold;
 }
 
+.tab:hover {
+  background: #3c3c3c;
+}
+
 .tab .icon {
   margin-right: 7px;
   vertical-align: middle;
   display: inline-block; 
   transform: translateY(2px);
-}
-
-.tab:hover {
-  background: #3c3c3c; 
 }
 
 .editor {

@@ -20,7 +20,7 @@ const Contact = () => {
             href="https://github.com/TheVaxly"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#007acc", textDecoration: "none" }} // Inline styling for the link
+            style={{ color: "#007acc", textDecoration: "none" }}
           >
             TheVaxly;
           </a>

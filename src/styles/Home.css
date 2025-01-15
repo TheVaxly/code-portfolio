@@ -35,38 +35,68 @@
 
 .circle-1 {
     background-color: #ff4e50;
-    width: 300px;
-    height: 300px;
-    top: -100px;
-    left: -100px;
+    width: 300px; 
+    height: 300px; 
+    top: -100px; 
+    left: -100px; 
     animation-delay: 0s;
 }
 
 .circle-2 {
     background-color: #fc913a;
-    width: 250px;
-    height: 250px;
-    top: 50px;
-    right: -100px;
+    width: 250px; 
+    height: 250px; 
+    top: 50px; 
+    right: -100px; 
     animation-delay: 2s;
 }
 
 .circle-3 {
     background-color: #f9d56e;
-    width: 400px;
-    height: 400px;
-    bottom: -150px;
-    left: 50px;
+    width: 400px; 
+    height: 400px; 
+    bottom: -150px; 
+    left: 50px; 
     animation-delay: 4s;
 }
 
 .circle-4 {
     background-color: #b2e7e5;
-    width: 350px;
-    height: 350px;
-    bottom: 0;
-    right: 0;
+    width: 350px; 
+    height: 350px; 
+    bottom: 0; 
+    right: 0; 
     animation-delay: 6s;
+}
+
+@media (max-width: 600px) {
+    .circle-1 {
+        width: 200px; 
+        height: 200px; 
+        top: -50px; 
+        left: -50px; 
+    }
+
+    .circle-2 {
+        width: 150px; 
+        height: 150px; 
+        top: 20px; 
+        right: -50px; 
+    }
+
+    .circle-3 {
+        width: 250px; 
+        height: 250px; 
+        bottom: -100px; 
+        left: 20px; 
+    }
+
+    .circle-4 {
+        width: 200px; 
+        height: 200px; 
+        bottom: 0; 
+        right: 0; 
+    }
 }
 
 @keyframes float {
@@ -113,7 +143,6 @@ p {
     background-color: #005fa3; 
 }
 
-/* Editor Styles */
 .editor-container {
     display: flex;
     flex-direction: column;
@@ -127,4 +156,17 @@ p {
     background: #1e1e1e; 
     color: #d4d4d4; 
     overflow-y: auto; 
+}
+
+h1::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
