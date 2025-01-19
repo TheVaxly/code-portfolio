@@ -33,3 +33,8 @@
     color: #ffffff;
   }
   
+  .about a {
+    color: #007acc;
+    text-decoration: none;
+    font-size: large;
+  }

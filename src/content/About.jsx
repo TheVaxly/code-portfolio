@@ -26,6 +26,7 @@ const About = () => (
       I am eager to continue developing my expertise in software development and contribute my 
       creativity and dedication to innovative projects.
     </p>
+    <a href="https://drive.google.com/file/d/19TmMmc62oh3sBZdJYj_rffqzTU2X3ERP/view?usp=sharing">View CV</a>
   </div>
 );
 
