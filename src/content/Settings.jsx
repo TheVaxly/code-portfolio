@@ -1,11 +1,9 @@
 import React from "react";
 
-const Settings = ({ toggleTheme }) => {
+const Settings = ({}) => {
   return (
     <div>
-      <h2>Theme Settings</h2>
-      <button onClick={() => toggleTheme("dark")}>Dark Theme</button>
-      <button onClick={() => toggleTheme("light")}>Light Theme</button>
+      <h2>Settings</h2>
     </div>
   );
 };

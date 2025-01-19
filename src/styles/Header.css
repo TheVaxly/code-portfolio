@@ -24,6 +24,10 @@
   color: #ff9999;
 }
 
+.menu-options {
+  cursor: pointer;
+}
+
 @media (max-width: 570px) {
   .menu-options {
     display: none;

@@ -9,10 +9,6 @@
   transition: width 0.3s;
 }
 
-.activity-bar:hover {
-  width: 100px;
-}
-
 .activity-bar button {
   background: none;
   border: none;
