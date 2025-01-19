@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import ActivityBar from "./components/ActivityBar";
 import Sidebar from "./components/Sidebar";
@@ -7,8 +7,20 @@ import StatusBar from "./components/StatusBar";
 import "./App.css";
 
 const App = () => {
-  const [activeFile, setActiveFile] = useState("home.jsx");
-  const [tabs, setTabs] = useState(["home.jsx"]);
+
+  const [activeFile, setActiveFile] = useState(() => {
+    return sessionStorage.getItem("activeFile") || "home.jsx";
+  });
+
+  const [tabs, setTabs] = useState(() => {
+    const storedTabs = sessionStorage.getItem("tabs");
+    return storedTabs ? JSON.parse(storedTabs) : ["home.jsx"];
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem("activeFile", activeFile);
+    sessionStorage.setItem("tabs", JSON.stringify(tabs));
+  }, [activeFile, tabs]);
 
   const openFile = (fileName) => {
     if (!tabs.includes(fileName)) {
@@ -29,9 +41,17 @@ const App = () => {
     <div className="app">
       <Header />
       <div className="app-body">
-        <ActivityBar openFile={openFile} openSettingsTab={openSettingsTab} setActiveFile={setActiveFile} />
+        <ActivityBar
+          openFile={openFile}
+          openSettingsTab={openSettingsTab}
+          setActiveFile={setActiveFile}
+        />
         <Sidebar openFile={openFile} />
-        <EditorContainer activeFile={activeFile} tabs={tabs} setActiveFile={setActiveFile} />
+        <EditorContainer
+          activeFile={activeFile}
+          tabs={tabs}
+          setActiveFile={setActiveFile}
+        />
       </div>
       <StatusBar />
     </div>
