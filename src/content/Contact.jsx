@@ -13,18 +13,32 @@ const Contact = () => {
       <div className="socials">
         <h2>Reach Out Via Socials</h2>
         <pre className="socials-pre">
-          {`1   .socials {`}
-          {socials.map((line, index) => `\n${index + 2}       ${line}`).join("")}
-          {`\n${socials.length + 2}       github: `}
+          <span>1   </span>
+          <span className="code-selector">.socials</span>{" "}
+          <span className="code-brace">{"{"}</span>
+          {socials.map((line, index) => {
+            const [key, value] = line.split(": ");
+            return (
+              <React.Fragment key={index}>
+                {`\n${index + 2}       `}
+                <span className="code-property">{key}</span>
+                <span className="code-colon">: </span>
+                <span className="code-value">{value}</span>
+              </React.Fragment>
+            );
+          })}
+          {`\n${socials.length + 2}       `}
+          <span className="code-property">github</span>
+          <span className="code-colon">: </span>
           <a
             href="https://github.com/TheVaxly"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#007acc", textDecoration: "none" }}
           >
             TheVaxly;
           </a>
-          {`\n${socials.length + 3}   }`}
+          {`\n${socials.length + 3}   `}
+          <span className="code-brace">{"}"}</span>
         </pre>
       </div>
 

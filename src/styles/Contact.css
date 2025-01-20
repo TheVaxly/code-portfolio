@@ -11,6 +11,9 @@
   width: 100%;
   max-width: 600px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .socials-pre {
@@ -22,10 +25,11 @@
   font-size: 18px;
   white-space: pre-wrap;
   overflow: auto;
+  width: 75%;
 }
 
 .socials-pre a {
-  color: #007acc;
+  color: #ce9178;
   text-decoration: none;
 }
 
@@ -120,4 +124,24 @@
   .contact-form button {
     font-size: 12px; 
   }
+}
+
+.code-selector {
+  color: #74d858;
+}
+
+.code-brace {
+  color: #d4d4d4;
+}
+
+.code-property {
+  color: #9cdcfe;
+}
+
+.code-colon {
+  color: #d4d4d4;
+}
+
+.code-value {
+  color: #ce9178;
 }
