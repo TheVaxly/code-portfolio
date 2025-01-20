@@ -46,7 +46,7 @@ const App = () => {
           openSettingsTab={openSettingsTab}
           setActiveFile={setActiveFile}
         />
-        <Sidebar openFile={openFile} />
+        <Sidebar openFile={openFile} activeFile={activeFile} />
         <EditorContainer
           activeFile={activeFile}
           tabs={tabs}

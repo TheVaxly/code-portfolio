@@ -19,7 +19,8 @@
   }
   
   .sidebar li {
-    padding: 5px 10px;
+    padding: 3px 10px;
+    margin: 2px 0;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -44,4 +45,14 @@
     color: #eeee3b;
   }
 
+  .sidebar li.active {
+    background: #37373d;
+    font-weight: bold;
+    padding: 3px 10px;
+  }
+
+  .sidebar li.active:hover {
+    background: #37373d;
+    padding: 3px 10px;
+  }
   

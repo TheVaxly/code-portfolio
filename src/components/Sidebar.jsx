@@ -11,12 +11,16 @@ const files = [
   { displayName: "Skills.js", actualName: "skills.jsx", icon: <FaJs className="icon-y" /> },
 ];
 
-const Sidebar = ({ openFile }) => (
+const Sidebar = ({ openFile, activeFile }) => (
   <div className="sidebar">
     <h3>PORTFOLIO</h3>
     <ul>
       {files.map((file) => (
-        <li key={file.actualName} onClick={() => openFile(file.actualName)}>
+        <li 
+          key={file.actualName} 
+          onClick={() => openFile(file.actualName)}
+          className={activeFile === file.actualName ? 'active' : ''}
+        >
           <span className="icon">{file.icon}</span> {file.displayName}
         </li>
       ))}
