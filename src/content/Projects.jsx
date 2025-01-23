@@ -1,5 +1,6 @@
 import React from "react";
 import "./../styles/Projects.css";
+import BuyMeACoffeeButton from "../components/BuyMeCoffeeButton";
 
 import UnipalImg from "./../assets/unipal.png";
 import PortfolioImg from "./../assets/portfolio.png";
@@ -56,6 +57,10 @@ const Projects = () => {
             </a>
           </div>
         ))}
+      </div>
+      <div className="support-section">
+        <h2>Support My Work</h2>
+        <BuyMeACoffeeButton />
       </div>
     </div>
   );

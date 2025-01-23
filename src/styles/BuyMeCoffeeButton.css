@@ -1,0 +1,30 @@
+.buy-me-coffee-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .buy-me-coffee-button img {
+    width: 100%;
+    max-width: 217px; 
+    height: auto; 
+    transition: transform 0.3s;
+  }
+  
+  .buy-me-coffee-button img:hover {
+    transform: scale(1.05); 
+  }
+  
+  @media (max-width: 768px) {
+    .buy-me-coffee-button img {
+      max-width: 180px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .buy-me-coffee-button img {
+      max-width: 150px; 
+    }
+  }
+  

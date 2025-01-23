@@ -61,3 +61,27 @@
 .project-card a:hover {
   text-decoration: underline;
 }
+
+.support-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.support-section h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.buy-me-a-coffee {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.buy-me-a-coffee img {
+  transition: transform 0.3s ease;
+}
+
+.buy-me-a-coffee img:hover {
+  transform: scale(1.05);
+}
