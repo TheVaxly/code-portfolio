@@ -17,49 +17,47 @@
   justify-content: center;
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
 .project-card {
   background: #2d2d2d;
   border: 1px solid #333;
   border-radius: 5px;
-  width: 250px;
-  padding: 15px;
+  width: 240px;
+  padding: 10px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 350px;
 }
 
 .project-image {
   width: 100%;
-  height: 150px;
-  object-fit: cover; 
-  border-radius: 5px;
-  margin-bottom: 15px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .project-card h3 {
-  color: #ffffff;
-  margin: 10px 0;
+  font-size: 1.2rem;
+  margin: 8px 0;
 }
 
 .project-card p {
-  font-size: 14px;
-  color: #d4d4d4;
+  font-size: 0.9rem;
+  margin: 8px 0;
 }
 
 .project-card a {
-  display: inline-block;
-  margin-top: 10px;
   color: #007acc;
-  text-decoration: none;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
 }
 
 .support-section {
@@ -84,4 +82,94 @@
 
 .buy-me-a-coffee img:hover {
   transform: scale(1.05);
+}
+
+.technology-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  margin: 6px 0;
+}
+
+.tech-tag {
+  background-color: #1e293b;
+  color: #94a3b8;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 2px solid;
+  line-height: 1.2;
+}
+
+.tech-tag.react {
+  border-color: #61dafb;
+}
+
+.tech-tag.sqllite {
+  border-color: #007acc;
+}
+
+.tech-tag.typescript {
+  border-color: #007acc;
+}
+
+.tech-tag.node-js {
+  border-color: #68a063;
+}
+
+.tech-tag.mongodb {
+  border-color: #4db33d;
+}
+
+.tech-tag.express {
+  border-color: #f7df1e;
+}
+
+.tech-tag.javascript {
+  border-color: #f7df1e;
+}
+
+.tech-tag.css {
+  border-color: #264de4;
+}
+
+.tech-tag.html {
+  border-color: #e34c26;
+}
+
+.tech-tag.python {
+  border-color: #3776ab;
+}
+
+.tech-tag.mysql {
+  border-color: #00758f;
+}
+
+.tech-tag.discord-py {
+  border-color: #5865f2;
+}
+
+.project-links {
+  margin-top: auto;
+  padding: 8px 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-links a {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #007acc;
+  padding: 4px 8px;
+  transition: opacity 0.2s;
+  display: inline-block;
+}
+
+.project-links a:hover {
+  opacity: 0.8;
 }

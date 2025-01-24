@@ -12,33 +12,32 @@ const projects = [
   {
     title: "Unipal",
     description: "Friend making service website developed with my 2 classmates.",
-    link: "https://unipal.jurmoharak.ee/",
-    image: UnipalImg, 
-  },
-  {
-    title: "Portfolio",
-    description: "My software development portfolio website.",
-    link: "/",
-    image: PortfolioImg, 
+    liveLink: "https://unipal.jurmoharak.ee/",
+    sourceLink: "https://github.com/RaZeSloth/unicorn-project",
+    image: UnipalImg,
+    technologies: ["React + Vite", "MongoDB", "Express", "Bootstrap", "Typescript"] 
   },
   {
     title: "VOCO-Kaardid",
     description: "Card collecting website related to our school staff and members.",
-    link: "https://voco-kaardid.arendusekoobas.ee/",
-    image: VocoKaardidImg, 
+    liveLink: "https://voco-kaardid.arendusekoobas.ee/",
+    sourceLink: "https://github.com/RaZeSloth/voco-kaardid",
+    image: VocoKaardidImg,
+    technologies: ["React + Vite", "MongoDB  ", "Express", "Bootstrap", "Typescript"] 
   },
   {
     title: "Human Benchmark",
-    description:
-      "Clone of the Human Benchmark website.",
-    link: "https://github.com/TheVaxly/human-benchmark",
-    image: HumanBenchmarkImg, 
+    description: "Clone of the Human Benchmark website.",
+    sourceLink: "https://github.com/TheVaxly/human-benchmark",
+    image: HumanBenchmarkImg,
+    technologies: ["HTML", "CSS", "JavaScript", "React + Vite"] 
   },
   {
     title: "ChatBot Larry",
     description: "Discord bot with various minigames and features.",
-    link: "https://github.com/TheVaxly/ChatBot-Larry-",
-    image: Larry, 
+    sourceLink: "https://github.com/TheVaxly/ChatBot-Larry-",
+    image: Larry,
+    technologies: ["Python", "Discord.py", "SQLite"] 
   },
 ];
 
@@ -52,9 +51,26 @@ const Projects = () => {
             <img src={project.image} alt={project.title} className="project-image" />
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a>
+            <div className="technology-tags">
+              {project.technologies.map((tech, techIndex) => (
+                <span 
+                  key={techIndex} 
+                  className={`tech-tag ${tech.toLowerCase().replace('.', '-')}`}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="project-links">
+              {project.liveLink && (
+                <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                  View Live
+                </a>
+              )}
+              <a href={project.sourceLink} target="_blank" rel="noopener noreferrer">
+                View Source
+              </a>
+            </div>
           </div>
         ))}
       </div>

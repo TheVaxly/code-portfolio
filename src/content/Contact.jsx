@@ -3,7 +3,7 @@ import "./../styles/Contact.css";
 
 const Contact = () => {
   const socials = [
-    "email: marten.uiboupin@gmail.com;",
+    "email: marten.uiboupin@voco.ee;",
     "discord: vaxly;",
     "phone: +372 5841 7113;",
   ];
