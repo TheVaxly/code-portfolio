@@ -3,7 +3,6 @@ import "./../styles/Projects.css";
 import BuyMeACoffeeButton from "../components/BuyMeCoffeeButton";
 
 import UnipalImg from "./../assets/unipal.png";
-import PortfolioImg from "./../assets/portfolio.png";
 import HumanBenchmarkImg from "./../assets/human-benchmark.png";
 import VocoKaardidImg from "./../assets/voco-kaardid.png";
 import Larry from "./../assets/Larry.png";
@@ -47,7 +46,11 @@ const Projects = () => {
       <h1>Projects</h1>
       <div className="projects-list">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
+          <div 
+            key={index} 
+            className="project-card"
+            style={{"--index": index}}
+          >
             <img src={project.image} alt={project.title} className="project-image" />
             <h3>{project.title}</h3>
             <p>{project.description}</p>

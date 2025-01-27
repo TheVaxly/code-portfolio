@@ -45,6 +45,10 @@
     color: #eeee3b;
   }
 
+  .icon-react {
+    color: #61dafb;
+  }
+
   .sidebar li.active {
     background: #37373d;
     font-weight: bold;

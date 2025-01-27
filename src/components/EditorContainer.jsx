@@ -13,19 +13,19 @@ import { LuFileJson } from "react-icons/lu";
 
 const tabs = [
   { name: "home.jsx", icon: <FaReact /> },
-  { name: "about.jsx", icon: <FaHtml5 /> },
-  { name: "contact.jsx", icon: <FaCss3Alt /> },
-  { name: "projects.jsx", icon: <LuFileJson /> },
-  { name: "skills.jsx", icon: <FaJs /> },
+  { name: "about.html", icon: <FaHtml5 /> },
+  { name: "contact.css", icon: <FaCss3Alt /> },
+  { name: "projects.json", icon: <LuFileJson /> },
+  { name: "skills.js", icon: <FaJs /> },
 ];
 
 const contentMap = {
   "home.jsx": (openFile) => <Home openFile={openFile} />,
-  "about.jsx": <About />,
-  "contact.jsx": <Contact />,
-  "projects.jsx": <Projects />,
+  "about.html": <About />,
+  "contact.css": <Contact />,
+  "projects.json": <Projects />,
   "settings": <Settings />,
-  "skills.jsx": <Skills />,
+  "skills.js": <Skills />,
 };
 
 const EditorContainer = ({ activeFile, setActiveFile }) => (

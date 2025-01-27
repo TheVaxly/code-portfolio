@@ -24,11 +24,11 @@ const Home = ({ openFile }) => {
         <p>
           I'm Marten Uiboupin, a web developer who loves building web apps and websites. Explore my portfolio to learn more about me and my projects.
         </p>
-        <button className="cta-button" onClick={() => openFile("projects.jsx")}>
+        <button className="cta-button" onClick={() => openFile("projects.json")}>
           View Projects
         </button>
-        <button className="cta-button" onClick={() => openFile("contact.jsx")}>
-          Contact Me
+        <button className="cta-button" onClick={() => openFile("contact.css")}>
+          Contact me
         </button>
       </div>
       <div className="background-shapes">
