@@ -7,12 +7,12 @@ const About = () => (
     <p>
       I am{" "}
       <strong>
-        <a href="https://drive.google.com/file/d/19TmMmc62oh3sBZdJYj_rffqzTU2X3ERP/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/19TmMmc62oh3sBZdJYj_rffqzTU2X3ERP/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="Marten Uiboupin CV">
           Marten Uiboupin
         </a>
       </strong>, an 18-year-old aspiring software developer currently studying at{" "}
       <strong>
-        <a href="https://voco.ee/" target="_blank" rel="noopener noreferrer">
+        <a href="https://voco.ee/" target="_blank" rel="noopener noreferrer" title="Tartu Vocational College Website">
           Tartu Vocational College
         </a>
       </strong>. My journey into software development began with a strong 
@@ -21,7 +21,7 @@ const About = () => (
     <p>
       I have a solid educational foundation, having previously attended{" "}
       <strong>
-        <a href="https://raatuse.tartu.ee/" target="_blank" rel="noopener noreferrer">
+        <a href="https://raatuse.tartu.ee/" target="_blank" rel="noopener noreferrer" title="Tartu Raatuse School Website">
           Tartu Raatuse School
         </a>
       </strong>. Beyond academics, I enjoy staying active by playing volleyball, 
@@ -31,8 +31,9 @@ const About = () => (
       In addition to my studies, I have participated in events such as:
     </p>
     <ul>
-      <li>VOCO Green Hackathon 2024 - Secured 5th place.</li>
-      <li>VOCO "Maker of the Year 2023" - Participated in the software development category.</li>
+      <li>🥇 VOCO Green Hackathon 2024 - 5th Place</li>
+      <li>🏆 VOCO "Maker of the Year 2023" - Software Development Category</li>
+      <li>💻 Multiple personal and collaborative web development projects</li>
     </ul>
     <p>
       These experiences have enhanced my teamwork, problem-solving, and project management skills. 

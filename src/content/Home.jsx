@@ -20,16 +20,18 @@ const Home = ({ openFile }) => {
   return (
     <div className="home-container">
       <div className="content">
-        <h1>{displayedText}</h1>
-        <p>
-          I'm Marten Uiboupin, a web developer who loves building web apps and websites. Explore my portfolio to learn more about me and my projects.
+        <h1 className="animated-text">{displayedText}</h1>
+        <p className="intro-text">
+          I'm Marten Uiboupin, a <span className="highlight">web developer</span> who loves building web apps and websites. Explore my portfolio to learn more about me and my projects.
         </p>
-        <button className="cta-button" onClick={() => openFile("projects.json")}>
-          View Projects
-        </button>
-        <button className="cta-button" onClick={() => openFile("contact.css")}>
-          Contact me
-        </button>
+        <div className="button-group">
+          <button className="cta-button primary" onClick={() => openFile("projects.json")}>
+            View Projects
+          </button>
+          <button className="cta-button secondary" onClick={() => openFile("contact.css")}>
+            Contact me
+          </button>
+        </div>
       </div>
       <div className="background-shapes">
         <div className="circle circle-1"></div>

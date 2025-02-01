@@ -27,6 +27,7 @@ const projects = [
   {
     title: "Human Benchmark",
     description: "Clone of the Human Benchmark website.",
+    liveLink: "https://benchmark.uiboupin.ee/",
     sourceLink: "https://github.com/TheVaxly/human-benchmark",
     image: HumanBenchmarkImg,
     technologies: ["HTML", "CSS", "JavaScript", "React + Vite"] 

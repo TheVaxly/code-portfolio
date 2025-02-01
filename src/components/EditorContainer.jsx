@@ -11,12 +11,12 @@ import Skills from "../content/Skills.jsx";
 import { FaHtml5, FaCss3Alt, FaReact, FaJs  } from "react-icons/fa";
 import { LuFileJson } from "react-icons/lu";
 
-const tabs = [
-  { name: "home.jsx", icon: <FaReact /> },
-  { name: "about.html", icon: <FaHtml5 /> },
-  { name: "contact.css", icon: <FaCss3Alt /> },
-  { name: "projects.json", icon: <LuFileJson /> },
-  { name: "skills.js", icon: <FaJs /> },
+const initialTabs = [
+  { id: "home.jsx", name: "home.jsx", icon: <FaReact className="icon-react" /> },
+  { id: "about.html", name: "about.html", icon: <FaHtml5 className="icon-html" /> },
+  { id: "contact.css", name: "contact.css", icon: <FaCss3Alt className="icon-css" /> },
+  { id: "projects.json", name: "projects.json", icon: <LuFileJson className="icon-y" /> },
+  { id: "skills.js", name: "skills.js", icon: <FaJs className="icon-y" /> },
 ];
 
 const contentMap = {
@@ -31,11 +31,11 @@ const contentMap = {
 const EditorContainer = ({ activeFile, setActiveFile }) => (
   <div className="editor-container">
     <div className="tabs">
-      {tabs.map((tab) => (
+      {initialTabs.map((tab) => (
         <div
-          key={tab.name}
-          className={`tab ${activeFile === tab.name ? "active" : ""}`}
-          onClick={() => setActiveFile(tab.name)}
+          key={tab.id}
+          className={`tab ${activeFile === tab.id ? "active" : ""}`}
+          onClick={() => setActiveFile(tab.id)}
         >
           <span className="icon">{tab.icon}</span>
           {tab.name}
