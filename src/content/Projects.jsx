@@ -30,7 +30,7 @@ const projects = [
     liveLink: "https://benchmark.uiboupin.ee/",
     sourceLink: "https://github.com/TheVaxly/human-benchmark",
     image: HumanBenchmarkImg,
-    technologies: ["HTML", "CSS", "JavaScript", "React + Vite"] 
+    technologies: ["HTML", "CSS", "Bootstrap","JavaScript", "React + Vite"] 
   },
   {
     title: "ChatBot Larry",

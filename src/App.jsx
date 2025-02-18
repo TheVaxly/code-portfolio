@@ -7,7 +7,6 @@ import StatusBar from "./components/StatusBar";
 import "./App.css";
 
 const App = () => {
-
   const [activeFile, setActiveFile] = useState(() => {
     return sessionStorage.getItem("activeFile") || "home.jsx";
   });
@@ -16,6 +15,8 @@ const App = () => {
     const storedTabs = sessionStorage.getItem("tabs");
     return storedTabs ? JSON.parse(storedTabs) : ["home.jsx"];
   });
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   useEffect(() => {
     sessionStorage.setItem("activeFile", activeFile);
@@ -37,6 +38,11 @@ const App = () => {
     setActiveFile(settingsFileName);
   };
 
+  const toggleSidebar = () => {
+    console.log('Toggling sidebar. Current state:', isSidebarOpen);
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="app">
       <Header />
@@ -45,12 +51,18 @@ const App = () => {
           openFile={openFile}
           openSettingsTab={openSettingsTab}
           setActiveFile={setActiveFile}
+          toggleSidebar={toggleSidebar}
         />
-        <Sidebar openFile={openFile} activeFile={activeFile} />
+        <Sidebar
+          openFile={openFile}
+          activeFile={activeFile}
+          isSidebarOpen={isSidebarOpen}
+        />
         <EditorContainer
           activeFile={activeFile}
           tabs={tabs}
           setActiveFile={setActiveFile}
+          className={isSidebarOpen ? '' : 'expanded'}
         />
       </div>
       <StatusBar />

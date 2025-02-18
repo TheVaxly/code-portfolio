@@ -3,6 +3,15 @@
   flex-direction: column;
   flex: 1;
   position: relative;
+  transition: margin-left 0.3s ease;
+}
+
+.editor-container.expanded {
+  margin-left: 0;
+}
+
+.editor-container.sidebar-closed {
+  margin-left: 0;
 }
 
 .tabs {

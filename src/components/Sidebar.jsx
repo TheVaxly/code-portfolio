@@ -11,11 +11,11 @@ const files = [
   { displayName: "Skills.js", actualName: "skills.js", icon: <FaJs className="icon-y" /> },
 ];
 
-const Sidebar = ({ openFile, activeFile }) => {
+const Sidebar = ({ openFile, activeFile, isSidebarOpen }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isSidebarOpen ? '' : 'collapsed'}`}>
       <h3 onClick={() => setIsOpen(!isOpen)}>
         <FaChevronDown className={`arrow-icon ${isOpen ? 'open' : ''}`} />
         PORTFOLIO

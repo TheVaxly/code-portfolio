@@ -2,12 +2,15 @@ import React from "react";
 import "./../styles/ActivityBar.css";
 import { FaFolder, FaSearch, FaCodeBranch, FaCog } from 'react-icons/fa';
 
-const ActivityBar = ({ setActiveFile, openSettingsTab }) => {
+const ActivityBar = ({ toggleSidebar, openSettingsTab }) => {
   const githubLink = "https://github.com/TheVaxly";
 
   return (
     <div className="activity-bar">
-      <button title="Explorer" onClick={() => setActiveFile("home.jsx")}>
+      <button 
+        onClick={toggleSidebar}
+        title="Explorer"
+      >
         <FaFolder />
       </button>
       <button title="Search" onClick={() => console.log('Search Clicked')}>
