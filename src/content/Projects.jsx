@@ -6,13 +6,13 @@ import UnipalImg from "./../assets/unipal.png";
 import HumanBenchmarkImg from "./../assets/human-benchmark.png";
 import VocoKaardidImg from "./../assets/voco-kaardid.png";
 import Larry from "./../assets/Larry.png";
+import FreeGamesList from "./../assets/freegames.png";
 
 const projects = [
   {
     title: "Unipal",
     description: "Friend making service website developed with my 2 classmates.",
     liveLink: "https://unipal.jurmoharak.ee/",
-    sourceLink: "https://github.com/RaZeSloth/unicorn-project",
     image: UnipalImg,
     technologies: ["React + Vite", "MongoDB", "Express", "Bootstrap", "Typescript"] 
   },
@@ -20,7 +20,6 @@ const projects = [
     title: "VOCO-Kaardid",
     description: "Card collecting website related to our school staff and members.",
     liveLink: "https://voco-kaardid.arendusekoobas.ee/",
-    sourceLink: "https://github.com/RaZeSloth/voco-kaardid",
     image: VocoKaardidImg,
     technologies: ["React + Vite", "MongoDB  ", "Express", "Bootstrap", "Typescript"] 
   },
@@ -39,6 +38,13 @@ const projects = [
     image: Larry,
     technologies: ["Python", "Discord.py", "SQLite"] 
   },
+  {
+    title: "FreeGamesList",
+    description: "Website that shows free games from various platforms.",
+    liveLink: "https://freegames.arendusekoobas.ee/",
+    image: FreeGamesList,
+    technologies: ["React + Vite", "Supabase", "Bootstrap", "Typescript"]
+  }
 ];
 
 const Projects = () => {
@@ -71,9 +77,11 @@ const Projects = () => {
                   View Live
                 </a>
               )}
-              <a href={project.sourceLink} target="_blank" rel="noopener noreferrer">
-                View Source
-              </a>
+              {project.sourceLink && (
+                <a href={project.sourceLink} target="_blank" rel="noopener noreferrer">
+                  View Source
+                </a>
+              )}
             </div>
           </div>
         ))}
